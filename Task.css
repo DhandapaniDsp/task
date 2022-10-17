@@ -1,6 +1,5 @@
 body {
     font-family: montserrat;
-    height: 100vh;
 }
 
 .bg-login {
@@ -53,7 +52,7 @@ body {
     width: 563px;
     height: 556px;
     opacity: 1;
-    margin-left: 60px;
+    margin-left: 55px;
     margin-right: 60px;
     margin-top: 106px;
 }
@@ -148,8 +147,9 @@ input[id="Confirm"] {
     opacity: 1;
 }
 
-input::after {
-    border: 1px solid #219ebc;
+input[id="check1"]:focus{
+    background-color: #091b29;
+    color:#091b29
 }
 
 label[for="Uname"] {
