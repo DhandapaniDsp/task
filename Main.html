@@ -2,29 +2,32 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./Task.css" />
+    <title>Shop page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./task.css" />
+    <link href="./login.html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+
 </head>
 
 <body>
     <div class="main">
         <div class="container-fluid scroll-static-btn">
             <nav class="navbar navbar-expand-lg navbar-light Nav-bar">
-                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-                <div class="google-head navbar-brand"></div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                <div class="google-head navbar-brand" onclick="location.href='login.html'"></div>
+                <button class="navbar-toggler tgl-btn" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse product-sec-head" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav mr-auto" id="head">
                         <li class="nav-item" id="Home">
                             Home <span class="sr-only">(current)</span>
                         </li>
@@ -56,23 +59,23 @@
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3 checkboxes">
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 checkboxes">
                     <form class="check-sec">
                         <p class="filter-check">Filters</p>
-                        <input type="checkbox" id="check1" />
-                        <label for="check1" class="check"> Phones</label><br />
-                        <input type="checkbox" id="check2" />
-                        <label for="check2" class="check">Headphones</label><br />
-                        <input type="checkbox" id="check3" />
-                        <label for="check3" class="check">Accessories</label><br />
+                        <input type="checkbox" id="Phone" checked />
+                        <label for="Phone" class="check"> Phones</label><br />
+                        <input type="checkbox" id="Headphone" />
+                        <label for="Headphone" class="check">Headphones</label><br />
+                        <input type="checkbox" id="Accessories" />
+                        <label for="Accessories" class="check">Accessories</label><br />
                     </form>
                 </div>
-                <div class="col-md-9">
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 ">
                     <div class="container">
                         <div class="row prod scroll-head">
                             <!-- col1 -->
-                            <div class="col-lg-4">
-                                <div class="card"  onmouseover="colone(this)"  onmouseleave="colhovone(this)">
+                            <div class="  col-sm-12 col-md-12 col-lg-6 col-xl-4 ">
+                                <div class="card" onmouseover="cardOne(this)" onmouseleave="cardHovOne(this)">
                                     <div class="card-bg-px-five">
                                         <div class="phn-px-five"></div>
                                         <div class="card-title-normal" id="one">
@@ -93,8 +96,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-title-normal" id="onehov"
-                                            style="display: none">
+                                        <div class="card-title-normal" id="onehov" style="display: none">
                                             <div class="container">
                                                 <div class="row">
                                                     <div>
@@ -112,7 +114,7 @@
                                     </div>
                                 </div>
                                 <br />
-                                <div class="card"  onmouseover="coltwo(this)"  onmouseleave="colhovtwo(this)">
+                                <div class="card" onmouseover="cardTwo(this)" onmouseleave="cardHovTwo(this)">
                                     <div class="card-bg-px-six-pro">
                                         <div class="phn-px-six-pro"></div>
                                         <div class="card-title-normal" id="two">
@@ -131,8 +133,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-title-normal" id="twohov"
-                                            style="display: none">
+                                        <div class="card-title-normal" id="twohov" style="display: none">
                                             <div class="container">
                                                 <div class="row">
                                                     <div>
@@ -150,7 +151,7 @@
                                     </div>
                                 </div>
                                 <br />
-                                <div class="card" onmouseover="colthree(this)"  onmouseleave="colhovthree(this)">
+                                <div class="card" onmouseover="cardThree(this)" onmouseleave="cardHovThree(this)">
                                     <div class="card-bg-px-five">
                                         <div class="phn-px-five"></div>
                                         <div class="card-title-normal" id="three">
@@ -171,8 +172,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-title-normal" id="threehov"
-                                            style="display: none">
+                                        <div class="card-title-normal" id="threehov" style="display: none">
                                             <div class="container">
                                                 <div class="row">
                                                     <div>
@@ -192,8 +192,8 @@
                             </div>
 
                             <!-- col2 -->
-                            <div class="col-lg-4">
-                                <div class="card" onmouseover="colfour(this)" onmouseleave="colhovfour(this)">
+                            <div class=" col-sm-12 col-md-12 col-lg-6 col-xl-4 ">
+                                <div class="card" onmouseover="cardFour(this)" onmouseleave="cardHovFour(this)">
                                     <div class="card-bg-px-six">
                                         <div class="phn-px-six"></div>
                                         <div class="card-title-normal" id="four">
@@ -212,8 +212,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-title-normal" id="fourhov"
-                                            style="display: none">
+                                        <div class="card-title-normal" id="fourhov" style="display: none">
                                             <div class="container">
                                                 <div class="row">
                                                     <div>
@@ -232,7 +231,7 @@
                                 </div>
                                 <br />
 
-                                <div class="card" onmouseover="colfive(this)" onmouseleave="colhovfive(this)">
+                                <div class="card" onmouseover="cardFive(this)" onmouseleave="cardHovFive(this)">
                                     <div class="card-bg-px-six">
                                         <div class="phn-px-six"></div>
                                         <div class="card-title-normal" id="five">
@@ -251,8 +250,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-title-normal" id="fivehov"
-                                            style="display: none">
+                                        <div class="card-title-normal" id="fivehov" style="display: none">
                                             <div class="container">
                                                 <div class="row">
                                                     <div>
@@ -270,7 +268,7 @@
                                     </div>
                                 </div>
                                 <br />
-                                <div class="card" onmouseover="colsix(this)" onmouseleave="colhovsix(this)">
+                                <div class="card" onmouseover="cardSix(this)" onmouseleave="cardHovSix(this)">
                                     <div class="card-bg-px-six">
                                         <div class="phn-px-six"></div>
                                         <div class="card-title-normal" id="six">
@@ -289,8 +287,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-title-normal" id="sixhov"
-                                            style="display: none">
+                                        <div class="card-title-normal" id="sixhov" style="display: none">
                                             <div class="container">
                                                 <div class="row">
                                                     <div>
@@ -310,8 +307,8 @@
                             </div>
 
                             <!-- col3 -->
-                            <div class="col-lg-4">
-                                <div class="card" onmouseover="colseven(this)" onmouseleave="colhovseven(this)">
+                            <div class=" col-sm-12 col-md-12 col-lg-6 col-xl-4 ">
+                                <div class="card" onmouseover="cardSeven(this)" onmouseleave="cardHovSeven(this)">
                                     <div class="card-bg-px-six-pro">
                                         <div class="phn-px-six-pro"></div>
                                         <div class="card-title-normal" id="seven">
@@ -330,8 +327,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-title-normal" id="sevenhov"
-                                            style="display: none">
+                                        <div class="card-title-normal" id="sevenhov" style="display: none">
                                             <div class="container">
                                                 <div class="row">
                                                     <div>
@@ -349,7 +345,7 @@
                                     </div>
                                 </div>
                                 <br />
-                                <div class="card" onmouseover="coleight(this)" onmouseleave="colhoveight(this)">
+                                <div class="card" onmouseover="cardEight(this)" onmouseleave="cardHovEight(this)">
                                     <div class="card-bg-px-five">
                                         <div class="phn-px-five"></div>
                                         <div class="card-title-normal" id="eight">
@@ -370,8 +366,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-title-normal" id="eighthov"
-                                            style="display: none">
+                                        <div class="card-title-normal" id="eighthov" style="display: none">
                                             <div class="container">
                                                 <div class="row">
                                                     <div>
@@ -389,7 +384,7 @@
                                     </div>
                                 </div>
                                 <br />
-                                <div class="card" onmouseover="colnine(this)" onmouseleave="colhovnine(this)">
+                                <div class="card" onmouseover="cardNine(this)" onmouseleave="cardHovNine(this)">
                                     <div class="card-bg-px-six-pro">
                                         <div class="phn-px-six-pro"></div>
                                         <div class="card-title-normal" id="nine">
@@ -408,8 +403,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-title-normal" id="ninehov"
-                                            style="display: none">
+                                        <div class="card-title-normal" id="ninehov" style="display: none">
                                             <div class="container">
                                                 <div class="row">
                                                     <div>
@@ -427,12 +421,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="product-end">
-                            <div class="row">
-                                <div class="prod-mini-stars"></div>
-                                <p class="product-end-text">Product end here</p>
-                                <div class="prod-mini-stars"></div>
+
+                            <div class="product-end">
+                                <div class="row">
+                                    <div class="prod-mini-stars"></div>
+                                    <p class="product-end-text">Product end here</p>
+                                    <div class="prod-mini-stars"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -502,85 +497,77 @@
                                     </div>
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="inp-sec-name">
-                                                    <label for="Uname" id="cust-name-label">Name</label><br />
-                                                    <input type="text" id="cust-name" name="fname"
-                                                        placeholder="Arny Jackson" /><br />
-                                                </div>
+                                            <div class="inp-sec-name">
+                                                <label for="Name" id="cust-name-label">Name</label><br />
+                                                <input type="text" id="cust-name" name="Name"
+                                                    placeholder="Arny Jackson" /><br />
                                             </div>
-                                            <div class="col-md-6">
-                                                <div class="inp-sec-contact">
-                                                    <label for="Uname" id="cust-contact-label">Contact
-                                                        Number</label><br />
-                                                    <input type="text" id="cust-contact" name="fname"
-                                                        placeholder="+91 99999 99999" /><br />
-                                                </div>
+                                            <div class="inp-sec-contact">
+                                                <label for="Contact" id="cust-contact-label">Contact
+                                                    Number</label><br />
+                                                <input type="number" id="cust-contact" name="Contact"
+                                                    placeholder="+91 99999 99999" /><br />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="inp-sec-address">
-                                        <label for="Uname" id="cust-address-label">Contact Number</label><br />
-                                        <input type="text" id="cust-address" name="fname"
+                                        <label for="Address" id="cust-address-label">Address</label><br />
+                                        <input type="text" id="cust-address" name="Address"
                                             placeholder="Dubai main road,Dubai cross street" /><br />
                                     </div>
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="drop-sec">
-                                                    <label id="drop" for="cars">Choose a car:</label>
-                                                    <select name="cars" id="cars">
-                                                        <option class="drop-val" value="volvo">
-                                                            Select City
-                                                        </option>
-                                                        <option class="drop-val" value="saab">
-                                                            Chennai
-                                                        </option>
-                                                        <option class="drop-val" value="opel">
-                                                            Madurai
-                                                        </option>
-                                                        <option class="drop-val" value="audi">
-                                                            Kancheepuram
-                                                        </option>
-                                                        <option class="drop-val" value="saab">
-                                                            Chennai
-                                                        </option>
-                                                        <option class="drop-val" value="opel">
-                                                            Madurai
-                                                        </option>
-                                                        <option class="drop-val" value="audi">
-                                                            Kancheepuram
-                                                        </option>
-                                                    </select>
-                                                </div>
+                                            <div class="drop-sec">
+                                                <label id="drop" for="City">City:</label>
+                                                <select name="City" id="City">
+                                                    <option class="drop-val">
+                                                        Select City
+                                                    </option>
+                                                    <option class="drop-val" value="Chennai">
+                                                        Chennai
+                                                    </option>
+                                                    <option class="drop-val" value="Madurai">
+                                                        Madurai
+                                                    </option>
+                                                    <option class="drop-val" value="Kancheepuram">
+                                                        Kancheepuram
+                                                    </option>
+                                                    <option class="drop-val" value="Chennai">
+                                                        Chennai
+                                                    </option>
+                                                    <option class="drop-val" value="Madurai">
+                                                        Madurai
+                                                    </option>
+                                                    <option class="drop-val" value="Kancheepuram">
+                                                        Kancheepuram
+                                                    </option>
+                                                </select>
                                             </div>
-                                            <div class="col-md-6">
-                                                <div class="drop-secs">
-                                                    <label id="drop" for="cars">Choose a car:</label>
-                                                    <select name="cars" id="cars">
-                                                        <option class="drop-val" value="volvo">
-                                                            Select Country
-                                                        </option>
-                                                        <option class="drop-val" value="saab">
-                                                            China
-                                                        </option>
-                                                        <option class="drop-val" value="opel">
-                                                            India
-                                                        </option>
-                                                        <option class="drop-val" value="audi">
-                                                            Kailasha
-                                                        </option>
-                                                        <option class="drop-val" value="saab">
-                                                            China
-                                                        </option>
-                                                        <option class="drop-val" value="opel">
-                                                            India
-                                                        </option>
-                                                        <option class="drop-val" value="audi">
-                                                            Kailasha
-                                                        </option>
-                                                    </select>
-                                                </div>
+                                            <div class="drop-secs">
+                                                <label id="drop" for="Country">Country:</label>
+                                                <select name="Country" id="City">
+                                                    <option class="drop-val">
+                                                        Select Country
+                                                    </option>
+                                                    <option class="drop-val" value="China">
+                                                        China
+                                                    </option>
+                                                    <option class="drop-val" value="India">
+                                                        India
+                                                    </option>
+                                                    <option class="drop-val" value="Kailasha">
+                                                        Kailasha
+                                                    </option>
+                                                    <option class="drop-val" value="China">
+                                                        China
+                                                    </option>
+                                                    <option class="drop-val" value="India">
+                                                        India
+                                                    </option>
+                                                    <option class="drop-val" value="Kailasha">
+                                                        Kailasha
+                                                    </option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -718,7 +705,7 @@
                         <div class="column">
                             <p class="rate-bottoms-buy">$699</p>
                             <div class="row">
-                                <p class="card-review-count">
+                                <p class="card-review-pop">
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>(1.2k)
@@ -746,21 +733,21 @@
                     </div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-lg-6">
                                 <div class="row">
                                     <div class="right-arrow-img"></div>
                                     <div class="px-six-img-det"></div>
                                     <div class="left-arrow-img"></div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-lg-6">
                                 <div class="scroll-static-btn px-six-bottom-name-margin">
                                     <div class="row">
                                         <div class="column">
                                             <p class="px-six-bottom-name">Pixel 6</p>
                                             <p class="rate-bottom-buy">$699</p>
                                             <div class="row">
-                                                <p class="cards-reviews-count">
+                                                <p class="card-review-pop-two">
                                                     <span class="fa fa-star checked"></span>
                                                     <span class="fa fa-star checked"></span><span
                                                         class="fa fa-star checked"></span>(1.2k)
@@ -870,102 +857,6 @@
     </div>
 
     <!-- checkout -->
-
-    <script>
-        function profile(x) {
-            document.getElementById("prof").style.display = "block";
-            document.getElementById("btn").style.display = "none";
-        }
-
-        function create(x) {
-            document.getElementById("prof").style.display = "none";
-            document.getElementById("btn").style.display = "block";
-        }
-    </script>
-
-    <script>
-        function colone(x) {
-            document.getElementById("onehov").style.display = "block";
-            document.getElementById("one").style.display = "none";
-        }
-
-        function colhovone(x) {
-            document.getElementById("onehov").style.display = "none";
-            document.getElementById("one").style.display = "block";
-        }
-        function coltwo(x) {
-            document.getElementById("twohov").style.display = "block";
-            document.getElementById("two").style.display = "none";
-        }
-
-        function colhovtwo(x) {
-            document.getElementById("twohov").style.display = "none";
-            document.getElementById("two").style.display = "block";
-        }
-        function colthree(x) {
-            document.getElementById("threehov").style.display = "block";
-            document.getElementById("three").style.display = "none";
-        }
-
-        function colhovthree(x) {
-            document.getElementById("threehov").style.display = "none";
-            document.getElementById("three").style.display = "block";
-        }
-        function colfour(x) {
-            document.getElementById("fourhov").style.display = "block";
-            document.getElementById("four").style.display = "none";
-        }
-
-        function colhovfour(x) {
-            document.getElementById("fourhov").style.display = "none";
-            document.getElementById("four").style.display = "block";
-        }
-        function colfive(x) {
-            document.getElementById("fivehov").style.display = "block";
-            document.getElementById("five").style.display = "none";
-        }
-
-        function colhovfive(x) {
-            document.getElementById("fivehov").style.display = "none";
-            document.getElementById("five").style.display = "block";
-        }
-        function colsix(x) {
-            document.getElementById("sixhov").style.display = "block";
-            document.getElementById("six").style.display = "none";
-        }
-
-        function colhovsix(x) {
-            document.getElementById("sixhov").style.display = "none";
-            document.getElementById("six").style.display = "block";
-        }
-        function colseven(x) {
-            document.getElementById("sevenhov").style.display = "block";
-            document.getElementById("seven").style.display = "none";
-        }
-
-        function colhovseven(x) {
-            document.getElementById("sevenhov").style.display = "none";
-            document.getElementById("seven").style.display = "block";
-        }
-        function coleight(x) {
-            document.getElementById("eighthov").style.display = "block";
-            document.getElementById("eight").style.display = "none";
-        }
-
-        function colhoveight(x) {
-            document.getElementById("eighthov").style.display = "none";
-            document.getElementById("eight").style.display = "block";
-        }
-        function colnine(x) {
-            document.getElementById("ninehov").style.display = "block";
-            document.getElementById("nine").style.display = "none";
-        }
-
-        function colhovnine(x) {
-            document.getElementById("ninehov").style.display = "none";
-            document.getElementById("nine").style.display = "block";
-        }
-    </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
